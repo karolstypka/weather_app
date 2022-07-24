@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../add_page.dart';
+import '../add/add_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
