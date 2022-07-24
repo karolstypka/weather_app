@@ -17,10 +17,14 @@ class _AddPageState extends State<AddPage> {
       appBar: AppBar(
         title: const Text('Weather app'),
       ),
-      body: Column(
+      body: ListView(
+        padding: const EdgeInsets.symmetric(
+          horizontal: 30,
+          vertical: 20,
+        ),
         children: [
           const SizedBox(
-            height: 250,
+            height: 200,
           ),
           const TextField(
             decoration: InputDecoration(

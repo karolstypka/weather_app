@@ -52,6 +52,138 @@ class _HomePageState extends State<HomePage> {
         },
         child: const Icon(Icons.add),
       ),
+      body: ListView(
+        children: [
+          Container(
+            margin: const EdgeInsets.all(5),
+            decoration: const BoxDecoration(
+              color: Colors.transparent,
+            ),
+            child: Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.star,
+                    color: Colors.blue,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                const Text(
+                  '20°C',
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: Text(
+                    'Warszawa',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.delete,
+                    color: Colors.blue,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (context) => const AddPage(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.edit,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          Container(
+            margin: const EdgeInsets.all(5),
+            decoration: const BoxDecoration(
+              color: Colors.transparent,
+            ),
+            child: Row(
+              children: [
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.star,
+                    color: Colors.blue,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                const Text(
+                  '22°C',
+                  style: TextStyle(
+                    fontSize: 15.0,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const SizedBox(width: 10),
+                const Expanded(
+                  child: Text(
+                    'Poznan',
+                    style: TextStyle(
+                      fontSize: 15.0,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.delete,
+                    color: Colors.blue,
+                  ),
+                ),
+                ElevatedButton(
+                  onPressed: () {},
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    shape: const CircleBorder(),
+                  ),
+                  child: const Icon(
+                    Icons.edit,
+                    color: Colors.blue,
+                  ),
+                ),
+              ],
+            ),
+          )
+        ],
+      ),
     );
   }
 }
