@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:weather_app/features/details/details_page.dart';
 
 import '../add/add_page.dart';
 
@@ -36,53 +37,62 @@ class _HomePageState extends State<HomePage> {
       ),
       body: ListView(
         children: [
-          Container(
-            margin: const EdgeInsets.all(5),
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-            ),
-            child: Row(
-              children: [
-                const SizedBox(width: 10),
-                const Icon(
-                  Icons.star,
-                  color: Colors.grey,
+          InkWell(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => const DetailsPage(),
                 ),
-                const SizedBox(width: 10),
-                const Text(
-                  '20°C',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
+              );
+            },
+            child: Container(
+              margin: const EdgeInsets.all(5),
+              decoration: const BoxDecoration(
+                color: Colors.transparent,
+              ),
+              child: Row(
+                children: [
+                  const SizedBox(width: 10),
+                  const Icon(
+                    Icons.star,
+                    color: Colors.grey,
                   ),
-                ),
-                const SizedBox(width: 10),
-                const Expanded(
-                  child: Text(
-                    'Warszawa',
+                  const SizedBox(width: 10),
+                  const Text(
+                    '20°C',
                     style: TextStyle(
                       fontSize: 15.0,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.delete),
-                  color: Colors.blue,
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const AddPage(),
+                  const SizedBox(width: 10),
+                  const Expanded(
+                    child: Text(
+                      'Warszawa',
+                      style: TextStyle(
+                        fontSize: 15.0,
+                        fontWeight: FontWeight.bold,
                       ),
-                    );
-                  },
-                  icon: const Icon(Icons.edit),
-                  color: Colors.blue,
-                ),
-              ],
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () {},
+                    icon: const Icon(Icons.delete),
+                    color: Colors.blue,
+                  ),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) => const AddPage(),
+                        ),
+                      );
+                    },
+                    icon: const Icon(Icons.edit),
+                    color: Colors.blue,
+                  ),
+                ],
+              ),
             ),
           ),
           Container(
