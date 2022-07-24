@@ -30,6 +30,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  Color _iconColor = Colors.grey;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,17 +62,32 @@ class _HomePageState extends State<HomePage> {
             ),
             child: Row(
               children: [
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    shape: const CircleBorder(),
-                  ),
-                  child: const Icon(
-                    Icons.star,
-                    color: Colors.blue,
-                  ),
+                IconButton(
+                  onPressed: () {
+                    setState(
+                      () {
+                        if (_iconColor == Colors.grey) {
+                          _iconColor = Colors.blue;
+                        } else {
+                          _iconColor = Colors.grey;
+                        }
+                      },
+                    );
+                  },
+                  icon: const Icon(Icons.star),
+                  color: _iconColor,
                 ),
+                // ElevatedButton(
+                //   onPressed: () {},
+                //   style: ElevatedButton.styleFrom(
+                //     primary: Colors.white,
+                //     shape: const CircleBorder(),
+                //   ),
+                //   child: const Icon(
+                //     Icons.star,
+                //     color: Colors.blue,
+                //   ),
+                // ),
                 const SizedBox(width: 10),
                 const Text(
                   '20°C',
@@ -90,34 +106,44 @@ class _HomePageState extends State<HomePage> {
                     ),
                   ),
                 ),
-                ElevatedButton(
+                IconButton(
                   onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    shape: const CircleBorder(),
-                  ),
-                  child: const Icon(
-                    Icons.delete,
-                    color: Colors.blue,
-                  ),
+                  icon: const Icon(Icons.delete),
+                  color: Colors.blue,
                 ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const AddPage(),
-                      ),
-                    );
-                  },
-                  style: ElevatedButton.styleFrom(
-                    primary: Colors.white,
-                    shape: const CircleBorder(),
-                  ),
-                  child: const Icon(
-                    Icons.edit,
-                    color: Colors.blue,
-                  ),
+                // ElevatedButton(
+                //   onPressed: () {},
+                //   style: ElevatedButton.styleFrom(
+                //     primary: Colors.white,
+                //     shape: const CircleBorder(),
+                //   ),
+                //   child: const Icon(
+                //     Icons.delete,
+                //     color: Colors.blue,
+                //   ),
+                // ),
+                IconButton(
+                  onPressed: () {},
+                  icon: const Icon(Icons.edit),
+                  color: Colors.blue,
                 ),
+                // ElevatedButton(
+                //   onPressed: () {
+                //     Navigator.of(context).push(
+                //       MaterialPageRoute(
+                //         builder: (context) => const AddPage(),
+                //       ),
+                //     );
+                //   },
+                //   style: ElevatedButton.styleFrom(
+                //     primary: Colors.white,
+                //     shape: const CircleBorder(),
+                //   ),
+                //   child: const Icon(
+                //     Icons.edit,
+                //     color: Colors.blue,
+                //   ),
+                // ),
               ],
             ),
           ),
