@@ -95,55 +95,6 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Container(
-            margin: const EdgeInsets.all(5),
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-            ),
-            child: Row(
-              children: [
-                const SizedBox(width: 10),
-                const Icon(
-                  Icons.star,
-                  color: Colors.grey,
-                ),
-                const SizedBox(width: 10),
-                const Text(
-                  '22°C',
-                  style: TextStyle(
-                    fontSize: 15.0,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                const Expanded(
-                  child: Text(
-                    'Poznan',
-                    style: TextStyle(
-                      fontSize: 15.0,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-                IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.delete),
-                  color: Colors.blue,
-                ),
-                IconButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (context) => const AddPage(),
-                      ),
-                    );
-                  },
-                  icon: const Icon(Icons.edit),
-                  color: Colors.blue,
-                ),
-              ],
-            ),
-          )
         ],
       ),
     );

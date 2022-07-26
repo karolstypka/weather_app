@@ -11,6 +11,7 @@ class AddPage extends StatefulWidget {
 
 class _AddPageState extends State<AddPage> {
   bool _value = false;
+  final _controller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,8 +27,9 @@ class _AddPageState extends State<AddPage> {
           const SizedBox(
             height: 200,
           ),
-          const TextField(
-            decoration: InputDecoration(
+          TextField(
+            controller: _controller,
+            decoration: const InputDecoration(
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.all(
                   Radius.circular(30),
